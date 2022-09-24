@@ -5,10 +5,8 @@
 		"seed": "node --require esbuild-register prisma/seed.ts"
 	},
 	"scripts": {
-		"seed": "node prisma/seed.js",
-		"db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
 		"db:push": "npx prisma db push",
-		"build": "remix build && prisma generate",
+		"build": "remix build && npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
 		"dev": "remix dev",
 		"start": "cross-env NODE_ENV=production netlify dev"
 	},
