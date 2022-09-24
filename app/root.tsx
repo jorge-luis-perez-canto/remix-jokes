@@ -96,6 +96,8 @@ export function ErrorBoundary({ error }: { error: Error }) {
 			<div className="error-container">
 				<h1>App Error</h1>
 				<pre>{error.message}</pre>
+				<p>The stack trace is:</p>
+				<pre>{error.stack}</pre>
 			</div>
 		</Document>
 	);
