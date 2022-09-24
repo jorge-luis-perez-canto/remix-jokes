@@ -15,3 +15,9 @@
   for = "/build/*"
   [headers.values]
     "Cache-Control" = "public, max-age=31536000, s-maxage=31536000"
+
+[[plugins]]
+package = 'netlify-plugin-prisma-provider'
+  [plugins.inputs]
+  path = 'prisma/schema.prisma'
+  varName = 'DATABASE_PROVIDER'
