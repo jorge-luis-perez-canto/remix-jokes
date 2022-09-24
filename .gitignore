@@ -4,5 +4,3 @@ node_modules
 /public/build
 /.netlify
 
-/prisma/dev.db
-.env
