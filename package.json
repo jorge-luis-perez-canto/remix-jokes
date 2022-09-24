@@ -6,11 +6,11 @@
 	},
 	"scripts": {
 		"seed": "node prisma/seed.js",
-    "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
-    "db:push": "npx prisma db push",    
-		"build": "cross-env NODE_ENV=production remix build && npm run server:build",
+		"db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
+		"db:push": "npx prisma db push",
+		"build": "remix build",
 		"dev": "remix dev",
-		"start": "cross-env NODE_ENV=production netlify build"
+		"start": "cross-env NODE_ENV=production netlify dev"
 	},
 	"dependencies": {
 		"@netlify/functions": "^1.0.0",
@@ -18,6 +18,7 @@
 		"@remix-run/netlify": "^1.7.2",
 		"@remix-run/node": "^1.7.2",
 		"@remix-run/react": "^1.7.2",
+		"@remix-run/serve": "^1.7.2",
 		"bcryptjs": "^2.4.3",
 		"cross-env": "^7.0.3",
 		"react": "^18.2.0",
