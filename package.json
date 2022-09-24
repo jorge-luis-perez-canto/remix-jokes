@@ -6,7 +6,7 @@
 	},
 	"scripts": {
 		"seed": "node prisma/seed.js",
-		"build": "remix build",
+		"build": "cross-env NODE_ENV=production remix build && npm run server:build",
 		"dev": "remix dev",
 		"start": "cross-env NODE_ENV=production netlify build"
 	},
