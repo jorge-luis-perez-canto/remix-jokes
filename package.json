@@ -1,13 +1,15 @@
 {
 	"private": true,
 	"sideEffects": false,
-	"prisma": {
-		"seed": "node --require esbuild-register prisma/seed.ts"
-	},
 	"scripts": {
 		"build": "remix build",
 		"dev": "remix dev",
-		"start": "cross-env NODE_ENV=production netlify dev"
+		"start": "cross-env NODE_ENV=production netlify dev",
+		"gen-db": "prisma db push",
+		"seed": "prisma db seed"
+	},
+	"prisma": {
+		"seed": "node --require esbuild-register prisma/seed.ts"
 	},
 	"dependencies": {
 		"@netlify/functions": "^1.0.0",
